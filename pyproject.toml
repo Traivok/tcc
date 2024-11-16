@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "tcc"
+version = "0.1.0"
+description = ""
+authors = ["José R. A. Figueirôa <jraf@cin.ufpe.br>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+ultralytics = "^8.3.24"
+roboflow = "^1.1.48"
+python-dotenv = "^1.0.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
