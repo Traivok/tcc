@@ -4,20 +4,10 @@ from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 
 
-def cluster_latent_space(encoder, X, min_clusters=2, max_clusters=10):
+def cluster_latent_space(latent_features, min_clusters=2, max_clusters=10):
     """
-    Realiza a clusterização do espaço latente usando K-Means.
-
-    Args:
-        encoder (Model): Modelo Keras do encoder para extrair as características latentes.
-        X (ndarray): Dados de entrada.
-        min_clusters (int): Número mínimo de clusters a considerar.
-        max_clusters (int): Número máximo de clusters a considerar.
-
-    Returns:
-        dict: Resultados contendo `best_k`, `silhouette_scores`, e `final_labels`.
+    Perform clustering on already computed latent features.
     """
-    latent_features = encoder.predict(X)
     silhouette_scores = []
     possible_k = range(min_clusters, max_clusters + 1)
 
