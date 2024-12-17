@@ -23,6 +23,7 @@ scripts/tcc-*/
 
 **/*.pt
 
-**/**/env
+venv
+**/**/venv
 
 data/
