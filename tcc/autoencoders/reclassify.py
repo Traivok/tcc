@@ -126,7 +126,6 @@ def update_data_yaml(base_dir, output_base_dir, categories):
     # Salvar o novo YAML
     with open(output_yaml_path, "w") as f:
         yaml.dump(data_yaml, f, default_flow_style=False)
-
     print(f"Arquivo data.yaml atualizado salvo em: {output_yaml_path}")
 
 
